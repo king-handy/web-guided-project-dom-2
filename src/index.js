@@ -17,16 +17,28 @@ const modal = document.querySelector('div.modal')
 
 // 👉 TASK 2- Demo handling click events on button#launchButton, using:
 //  A- HTML inside index.html
+{/* <button onclick
 
+}
+function exampleClick() => {
+    console.log('Hello WEBPT30!!!')
+} */
 //  B- The DOM's element.onclick attribute
-
+launchButton.onclick = () => {
+    console.log('Opening modal...')
+}
 //  C- element.addEventListener('click', callback)
-
+launchButton.addEventListener('click', () +> {
+    console.log('Loading!')
+})
 
 // 👉 TASK 3- Create a function that launches!
 // It should open the confirmation modal.
 // Add it as an event listener for click events on the launch button.
-
+function showModal() {
+    // removes the class 'off'
+    modal.classList.toggle('off')
+}
 
 // 👉 TASK 4- Create a function to confirm the launch.
 // It should close the modal and display a success report.
