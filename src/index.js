@@ -37,10 +37,13 @@ launchButton.addEventListener('click', () => {
 // Add it as an event listener for click events on the launch button.
 function showModal() {
     // removes the class 'off'
-    modal.classList.toggle('off')
+    modal.classList.remove('off')
+    // clear any lingering messages
+    successMessage.classList.add('off')
+    failureMessage.classList.add('off')
 }
 
-// example of cleaning up an event listener with removeEventListener
+// example of cleaning up an event listener with removeEventListener:
 // const nav = document.querySelector('nav')
 // nav.addEventListener('click', () => {
 //     launchButton.removeEventListener('click', showModal)
@@ -49,11 +52,20 @@ function showModal() {
 // 👉 TASK 4- Create a function to confirm the launch.
 // It should close the modal and display a success report.
 // Add it as a listener for clicks on the confirmation button.
-
+confirmButton.addEventListener('click', () => {
+    // add 'off class to modal
+    modal.classList.add('off')
+    // remove 'off' class from successReport
+    successMessage.classList.remove('off')
+})
 
 // 👉 TASK 5- Create a function to cancel the launch.
 // It should close the modal and display a failure report.
 // Add it as a listener for clicks on the cancellation button.
+cancelButton.addEventListener('click', () => {
+    modal.classList.add('off')
+    failureMessage.classList.toggle('off')
+})
 
 
 // 👉 TASK 6- Create a function that closes the modal if
