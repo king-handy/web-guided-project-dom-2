@@ -17,12 +17,11 @@ const modal = document.querySelector('div.modal')
 
 // 👉 TASK 2- Demo handling click events on button#launchButton, using:
 //  A- HTML inside index.html
-{/* <button onclick
+{/* <button onclick = 'exampleClick()' id = 'launchButton'>Launch!</button>
 
-}
 function exampleClick() => {
     console.log('Hello WEBPT30!!!')
-} */
+} */}
 //  B- The DOM's element.onclick attribute
 launchButton.onclick = () => {
     console.log('Opening modal...')
@@ -71,7 +70,11 @@ cancelButton.addEventListener('click', () => {
 // 👉 TASK 6- Create a function that closes the modal if
 // the user hits the Escape key on their keyboard.
 // Add it as an event listener for 'keydown' events on document.
-
+document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape') {
+        modal.classList.add('off')
+    }
+})
 
 // 👉 TASK 7- Add to ALL ELEMENTS ON THE PAGE an event listener for click events.
 // It should console.log the target 🎯 of the event.
