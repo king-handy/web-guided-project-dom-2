@@ -72,7 +72,7 @@ cancelButton.addEventListener('click', () => {
 // Add it as an event listener for 'keydown' events on document.
 document.addEventListener('keydown', (event) => {
     if(event.key === 'Escape') {
-        modal.classList.add('off')
+        closeModal()
     }
 })
 
@@ -90,18 +90,24 @@ allElements.forEach(element => {
 // 👉 TASK 8- [STRETCH] Create helper functions to make the code
 // more readable in tasks 3, 4, 5, 6
 function openModal() {
-
+    modal.classList.remove('off')
 }
 
 function closeModal() {
-
+    modal.classList.add('off')
 }
 
 function killReports() {
-
+    successMessage.classList.add('off')
+    failureMessage.classList.add('off')
 }
 
 
 // 👉 TASK 9- [STRETCH] Using the mouseover event on 'document',
 // log to the console the X and Y coordinates
 // of the mouse pointer, as it moves over the screen.
+document.addEventListener('mouseover', event => {
+    console.log('x: ', event.x)
+    console.log('y: ', event.y)
+    console.log('/n')
+})
