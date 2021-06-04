@@ -28,7 +28,7 @@ launchButton.onclick = () => {
     console.log('Opening modal...')
 }
 //  C- element.addEventListener('click', callback)
-launchButton.addEventListener('click', () +> {
+launchButton.addEventListener('click', () => {
     console.log('Loading!')
 })
 
@@ -39,6 +39,12 @@ function showModal() {
     // removes the class 'off'
     modal.classList.toggle('off')
 }
+
+// example of cleaning up an event listener with removeEventListener
+// const nav = document.querySelector('nav')
+// nav.addEventListener('click', () => {
+//     launchButton.removeEventListener('click', showModal)
+// })
 
 // 👉 TASK 4- Create a function to confirm the launch.
 // It should close the modal and display a success report.
