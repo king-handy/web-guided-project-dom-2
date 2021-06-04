@@ -9,7 +9,7 @@ const cancelButton = document.querySelector('#cancelButton')
 
 // B- MESSAGES
 const successMessage = document.querySelector('h1.report.success')
-const failureMessage = failureMessage = document.querySelector('h1.report.failure')
+const failureMessage = document.querySelector('h1.report.failure')
 
 // C- MODAL
 const modal = document.querySelector('div.modal')
@@ -17,7 +17,9 @@ const modal = document.querySelector('div.modal')
 
 // 👉 TASK 2- Demo handling click events on button#launchButton, using:
 //  A- HTML inside index.html
+
 //  B- The DOM's element.onclick attribute
+
 //  C- element.addEventListener('click', callback)
 
 
